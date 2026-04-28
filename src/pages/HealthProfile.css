@@ -1,0 +1,228 @@
+/* src/pages/HealthProfile.css */
+
+.hp-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+  background: linear-gradient(160deg, #e8f5e9 0%, #faf8f2 60%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.hp-card {
+  background: white;
+  border-radius: 24px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  border: 1px solid rgba(82,183,136,0.15);
+}
+
+/* Header */
+.hp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.hp-step-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hp-step-num {
+  font-size: 12px;
+  color: #5a7a66;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hp-section-tag {
+  font-size: 13px;
+  color: #2d6a4f;
+  background: #d8f3dc;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Progress */
+.hp-progress-bg {
+  height: 6px;
+  background: #e8f5e9;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.hp-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #52b788, #2d6a4f);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* Section header */
+.hp-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hp-section-emoji { font-size: 28px; }
+
+.hp-section-title {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  color: #1a3a2a;
+  margin: 0;
+}
+
+/* Questions */
+.hp-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.hp-question-block { display: flex; flex-direction: column; gap: 12px; }
+
+.hp-question-label {
+  font-size: 15px;
+  color: #1c2b22;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Radio options */
+.hp-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hp-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border: 2px solid #e0ede5;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1c2b22;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.hp-option:hover {
+  border-color: #52b788;
+  background: #f4fbf6;
+}
+
+.hp-option-selected {
+  border-color: #2d6a4f;
+  background: #eaf7ef;
+  font-weight: 500;
+}
+
+.hp-option-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #b0c4b8;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.hp-option-selected .hp-option-dot {
+  background: #2d6a4f;
+  border-color: #2d6a4f;
+}
+
+.hp-check {
+  margin-left: auto;
+  color: #2d6a4f;
+  font-weight: 700;
+}
+
+/* Multiselect chips */
+.hp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hp-chip {
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 2px solid #e0ede5;
+  background: white;
+  color: #5a7a66;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.15s;
+}
+
+.hp-chip:hover { border-color: #52b788; color: #2d6a4f; }
+
+.hp-chip-selected {
+  background: #d8f3dc;
+  border-color: #2d6a4f;
+  color: #1a3a2a;
+  font-weight: 500;
+}
+
+/* Navigation */
+.hp-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.hp-btn-back {
+  padding: 13px 20px;
+  background: white;
+  border: 2px solid #d4e8dc;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #5a7a66;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+
+.hp-btn-back:hover { background: #f4fbf6; border-color: #52b788; }
+
+.hp-btn-next {
+  flex: 1;
+  padding: 13px;
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hp-btn-next:hover { background: #1a3a2a; }
+.hp-btn-next:active { transform: scale(0.98); }
+
+.hp-btn-disabled {
+  background: #b0c4b8 !important;
+  cursor: not-allowed !important;
+}

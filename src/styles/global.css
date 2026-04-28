@@ -1,0 +1,188 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --green-dark:   #1a3a2a;
+  --green-mid:    #2d6a4f;
+  --green-light:  #52b788;
+  --green-pale:   #d8f3dc;
+  --cream:        #faf8f2;
+  --text-dark:    #1c2b22;
+  --text-muted:   #5a7a66;
+  --error:        #c0392b;
+  --error-bg:     #fdf0ef;
+  --radius:       12px;
+  --shadow:       0 4px 24px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* Auth layout */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: linear-gradient(160deg, #e8f5e9 0%, #faf8f2 60%);
+}
+
+.auth-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(82,183,136,0.15);
+}
+
+.auth-card.wide { max-width: 520px; }
+
+.leaf-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
+  color: var(--green-dark);
+  margin-bottom: 4px;
+  font-size: 26px;
+}
+
+h2 { font-size: 22px; }
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Form elements */
+form { display: flex; flex-direction: column; gap: 4px; }
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+input, select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #d4e8dc;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: white;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--green-light);
+  box-shadow: 0 0 0 3px rgba(82,183,136,0.12);
+}
+
+/* Buttons */
+.btn-primary {
+  margin-top: 20px;
+  width: 100%;
+  padding: 13px;
+  background: var(--green-mid);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.btn-primary:hover { background: var(--green-dark); }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { background: #aaa; cursor: not-allowed; }
+
+.btn-skip {
+  margin-top: 12px;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: underline;
+}
+
+/* Error box */
+.error-box {
+  background: var(--error-bg);
+  border: 1px solid #f5c6c3;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--error);
+  margin-bottom: 8px;
+}
+
+/* Switch link */
+.switch-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.switch-link a { color: var(--green-mid); font-weight: 500; text-decoration: none; }
+.switch-link a:hover { text-decoration: underline; }
+
+/* Condition chips */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1.5px solid #d4e8dc;
+  background: white;
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.chip:hover { border-color: var(--green-light); color: var(--green-mid); }
+.chip-active { background: var(--green-pale); border-color: var(--green-light); color: var(--green-mid); font-weight: 500; }
+
+.info-box {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #2d6a4f;
+  margin-bottom: 8px;
+}
